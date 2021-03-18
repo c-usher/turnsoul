@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/phaser.js"></script>
+    <title>TurnSouls</title>
+  </head>
+  <body>
+    <script>
+      var config = {
+        type: Phaser.AUTO,
+        width: 1280,
+        height: 720,
+        scene: {
+          preload: preload,
+          create: create,
+          update: update,
+        },
+      };
+
+      var game = new Phaser.Game(config);
+
+      function preload() {
+        this.load.image("background", "/assets/background.jpeg");
+        this.load.image("combatPanel", "/assets/panel-5.png")
+      }
+
+      function create() {
+          this.add.image(640, 370, 'background');
+          const combatPanel = this.add.image(400,200, "combatPanel");
+          combatPanel.setOrigin(-0.67,-1.2);
+      }
+
+      function update() {}
+    </script>
+  </body>
+</html>
