@@ -25,12 +25,19 @@
       function preload() {
         this.load.image("background", "/assets/background.jpeg");
         this.load.image("combatPanel", "/assets/panel-5.png")
+        this.load.image("spaceshipOne", "/assets/good_guy_ships/1b.png")
+        this.load.image("spaceshipTwo", "/assets/good_guy_ships/2.png")
       }
 
       function create() {
           this.add.image(640, 370, 'background');
           const combatPanel = this.add.image(400,200, "combatPanel");
           combatPanel.setOrigin(-0.67,-1.2);
+          const spaceshipOne = this.add.image(10,10, "spaceshipOne");
+          spaceshipOne.setOrigin(-8,-2.5);
+         
+          const spaceshipTwo = this.add.image(10,10, "spaceshipTwo");
+          spaceshipTwo.setOrigin(-7.9, -0.5)
       }
 
       function update() {}
